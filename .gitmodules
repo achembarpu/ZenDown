@@ -10,3 +10,6 @@
 [submodule "github-markdown-css"]
 	path = github-markdown-css
 	url = https://github.com/sindresorhus/github-markdown-css
+[submodule "FileSaver.js"]
+	path = FileSaver.js
+	url = https://github.com/eligrey/FileSaver.js
