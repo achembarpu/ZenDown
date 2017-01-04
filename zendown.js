@@ -4,6 +4,7 @@
     // select relevant elements
     var editor = document.getElementById('editor'),
         viewer = document.getElementById('viewer'),
+        theme = document.getElementById('theme'),
         format = document.getElementById('format'),
         save = document.getElementById('save');
 
@@ -89,5 +90,21 @@
             'text/' + meta.dataset.mime,
             'document', meta.dataset.ext
         );
+    });
+
+    // theme switcher
+    function enableTheme(name) {
+        var styles = document.getElementsByTagName('link');
+        for (var style of styles) {
+            var title = style.title;
+            if (title !== '') {
+                style.disabled = (title !== name);
+            }
+        }
+    }
+
+    theme.addEventListener('click', function () {
+        var name = theme.querySelector(':checked').value;
+        enableTheme(name);
     });
 }());

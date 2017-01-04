@@ -8,7 +8,9 @@
     <meta name="author" content="Arvind Chembarpu">
     <link rel="icon" type="image/png" href="markdown-mark/ico/markdown-mark-solid-favicon.ico">
     <link rel="stylesheet" type="text/css" href="sanitize.css/sanitize.css">
-    <link rel="stylesheet" type="text/css" href="github-markdown-css/github-markdown.css">
+    <link rel="stylesheet" type="text/css" href="github-markdown-css/github-markdown.css" title="gfm">
+    <link rel="alternate stylesheet" type="text/css" href="solarized-css/solarized-light.css" title="light" disabled>
+    <link rel="alternate stylesheet" type="text/css" href="solarized-css/solarized-dark.css" title="dark" disabled>
     <link rel="stylesheet" type="text/css" href="zendown.css">
 </head>
 
@@ -18,7 +20,17 @@
             <div id="brand" class="col-pane">
                 <strong>ZenDown</strong>
             </div>
-            <div id="filler" class="col-pane"></div>
+            <div id="options" class="col-pane">
+                <div id="theme">
+                    <label>Theme:</label>
+                    <label>
+                        <input type="radio" name="theme" value="gfm" checked />None</label>
+                    <label>
+                        <input type="radio" name="theme" value="light" />Light</label>
+                    <label>
+                        <input type="radio" name="theme" value="dark" />Dark</label>
+                </div>
+            </div>
             <div id="tools" class="col-pane">
                 <select id="format">
                     <option value="html" data-mime="html" data-ext="html">HTML</option>

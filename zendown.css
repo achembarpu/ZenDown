@@ -1,9 +1,11 @@
 html,
 body {
+    border: 0px;
     height: 100%;
-    max-width: 100% !important;
+    max-width: 100%;
     margin: 0em;
     overflow: hidden;
+    padding: 0em;
 }
 
 button:disabled {
@@ -36,8 +38,11 @@ textarea {
     text-align: left;
 }
 
-#filler {
+#options {
     flex: 45%;
+    font: 0.8em sans-serif;
+    padding-right: 0.75em;
+    text-align: right;
 }
 
 #tools {
