@@ -6,6 +6,10 @@ body {
     overflow: hidden;
 }
 
+button:disabled {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQIW2NkQAKrVq36zwjjgzhhYWGMYAEYB8RmROaABADeOQ8CXl/xfgAAAABJRU5ErkJggg==) repeat;
+}
+
 textarea {
     outline: none;
     resize: none;
@@ -22,25 +26,29 @@ textarea {
 }
 
 #menu {
-    height: 3%;
+    height: 4%;
 }
 
 #brand {
-    flex: 10%;
+    flex: 5%;
+    font: bold 0.8em sans-serif;
     padding-left: 0.75em;
+    text-align: left;
 }
 
 #filler {
-    flex: 60%;
+    flex: 45%;
 }
 
 #tools {
-    flex: 30%;
+    flex: 50%;
+    font: 0.8em sans-serif;
     padding-right: 0.75em;
+    text-align: right;
 }
 
 #display {
-    height: 97%;
+    height: 96%;
 }
 
 .pane-container {
@@ -75,51 +83,31 @@ textarea {
 }
 
 .markdown-text {
-    font-family: monospace;
-    font-size: 1em;
+    font: 1.2em monospace;
 }
 
 .placeholder:empty:not(:focus):before {
     color: #808080;
     content: attr(data-placeholder);
-    font-family: monospace;
-    font-size: 0.8em;
+    font: 0.8em monospace;
 }
 
 ::-webkit-input-placeholder {
     color: #808080;
     font-family: monospace;
-    font-size: 1em;
 }
 
 ::-moz-placeholder {
     color: #808080;
     font-family: monospace;
-    font-size: 1em;
 }
 
 :-ms-input-placeholder {
     color: #808080;
     font-family: monospace;
-    font-size: 1em;
 }
 
 :-moz-placeholder {
     color: #808080;
     font-family: monospace;
-    font-size: 1em;
-}
-
-@media print {
-    body * {
-        visibility: hidden;
-    }
-    #viewer * {
-        visibility: visible;
-    }
-    #viewer {
-        position: absolute;
-        left: 0;
-        top: 0;
-    }
 }

@@ -1,7 +1,13 @@
 (function () {
     'use strict';
 
-    // functin call debouncer
+    // select relevant elements
+    var editor = document.getElementById('editor'),
+        viewer = document.getElementById('viewer'),
+        format = document.getElementById('format'),
+        save = document.getElementById('save');
+
+    // function call debouncer
     function debounce(func, wait, immediate) {
         var timeout;
         return function () {
@@ -21,10 +27,6 @@
             }
         };
     }
-
-    // select relevant elements
-    var editor = document.getElementById('editor'),
-        viewer = document.getElementById('viewer');
 
     // sync editor and viewer panes
     var SCROLL_LATENCY = 10;
@@ -50,7 +52,14 @@
 
     function renderMarkdown() {
         marked(editor.value, function (err, rendered) {
-            viewer.innerHTML = rendered;
+            var isCompiled = (err === null),
+                isEmpty = (rendered.length === 0);
+            save.disabled = (!isCompiled || isEmpty);
+            if (isCompiled) {
+                viewer.innerHTML = rendered;
+            } else {
+                window.alert(err);
+            }
             safeViewerScroll();
         });
     }
@@ -59,5 +68,26 @@
 
     editor.addEventListener('input', safeRenderMarkdown);
 
+    // file download generator
+    var CONTENT = {
+        html: function () { return viewer.innerHTML; },
+        markdown: function () { return editor.value; },
+        text: function () { return editor.value; },
+    };
 
+    function download(content, mime, name, ext) {
+        var blob = new Blob([content], {
+            type: mime + ';charset=utf-8'
+        });
+        saveAs(blob, name + '.' + ext);
+    }
+
+    save.addEventListener('click', function () {
+        var meta = format.querySelector(':checked');
+        download(
+            CONTENT[meta.value](),
+            'text/' + meta.dataset.mime,
+            'document', meta.dataset.ext
+        );
+    });
 }());

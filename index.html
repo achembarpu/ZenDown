@@ -19,7 +19,14 @@
                 <strong>ZenDown</strong>
             </div>
             <div id="filler" class="col-pane"></div>
-            <div id="tools" class="col-pane"></div>
+            <div id="tools" class="col-pane">
+                <select id="format">
+                    <option value="html" data-mime="html" data-ext="html">HTML</option>
+                    <option value="markdown" data-mime="plain" data-ext="md">Markdown</option>
+                    <option value="text" data-mime="plain" data-ext="txt">Text</option>
+                </select>
+                <button id="save" disabled>Download</button>
+            </div>
         </div>
         <div id="display" class="pane-container">
             <div class="row-pane">
@@ -31,6 +38,7 @@
         </div>
     </div>
     <script type="text/javascript" src="marked/lib/marked.js"></script>
+    <script type="text/javascript" src="FileSaver.js/FileSaver.js"></script>
     <script type="text/javascript" src="zendown.js"></script>
 </body>
 
