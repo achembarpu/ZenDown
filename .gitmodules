@@ -13,3 +13,7 @@
 [submodule "FileSaver.js"]
 	path = FileSaver.js
 	url = https://github.com/eligrey/FileSaver.js
+[submodule "solarized-css"]
+	path = solarized-css
+	url = https://github.com/thomasf/solarized-css
+	branch = gh-pages
