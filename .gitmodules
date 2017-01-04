@@ -4,3 +4,6 @@
 [submodule "sanitize.css"]
 	path = sanitize.css
 	url = https://github.com/jonathantneal/sanitize.css
+[submodule "marked"]
+	path = marked
+	url = https://github.com/chjj/marked
