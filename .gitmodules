@@ -1,3 +1,6 @@
 [submodule "markdown-mark"]
 	path = markdown-mark
 	url = https://github.com/dcurtis/markdown-mark
+[submodule "sanitize.css"]
+	path = sanitize.css
+	url = https://github.com/jonathantneal/sanitize.css
