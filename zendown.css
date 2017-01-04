@@ -1,0 +1,125 @@
+html,
+body {
+    height: 100%;
+    max-width: 100% !important;
+    margin: 0em;
+    overflow: hidden;
+}
+
+textarea {
+    outline: none;
+    resize: none;
+}
+
+#app {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+#menu {
+    height: 3%;
+}
+
+#brand {
+    flex: 10%;
+    padding-left: 0.75em;
+}
+
+#filler {
+    flex: 60%;
+}
+
+#tools {
+    flex: 30%;
+    padding-right: 0.75em;
+}
+
+#display {
+    height: 97%;
+}
+
+.pane-container {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+}
+
+.col-pane {
+    padding: 0.5em;
+    padding-bottom: 0.25em;
+}
+
+.row-pane {
+    flex: 50%;
+    padding: 0.5em;
+    padding-top: 0.25em;
+}
+
+.box {
+    border: 1px solid #000000;
+    border-radius: 5px;
+    box-sizing: border-box;
+    height: 100%;
+    overflow: auto;
+    padding: 1em;
+    width: 100%;
+}
+
+.markdown-body {
+    /* refer gfm.css */
+}
+
+.markdown-text {
+    font-family: monospace;
+    font-size: 1em;
+}
+
+.placeholder:empty:not(:focus):before {
+    color: #808080;
+    content: attr(data-placeholder);
+    font-family: monospace;
+    font-size: 0.8em;
+}
+
+::-webkit-input-placeholder {
+    color: #808080;
+    font-family: monospace;
+    font-size: 1em;
+}
+
+::-moz-placeholder {
+    color: #808080;
+    font-family: monospace;
+    font-size: 1em;
+}
+
+:-ms-input-placeholder {
+    color: #808080;
+    font-family: monospace;
+    font-size: 1em;
+}
+
+:-moz-placeholder {
+    color: #808080;
+    font-family: monospace;
+    font-size: 1em;
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    #viewer * {
+        visibility: visible;
+    }
+    #viewer {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}
