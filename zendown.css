@@ -85,10 +85,11 @@ textarea {
 
 .markdown-body {
     /* refer gfm.css */
+    font: 1.3em monospace;
 }
 
 .markdown-text {
-    font: 1.2em monospace;
+    font: 1.3em monospace;
 }
 
 .placeholder:empty:not(:focus):before {
