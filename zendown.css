@@ -84,7 +84,7 @@ textarea {
 }
 
 .markdown-body {
-    /* refer gfm.css */
+    /* refer github-markdown-css/github-markdown.css */
     font: 1.3em monospace;
 }
 
